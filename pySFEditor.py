@@ -5,7 +5,12 @@
 ###       5) On changing tabs it must be able to focus on that line again
 ###       6) Get syntax highlight color scheme from file type
 
-import tkinter as tk
+try:
+    # for Python2
+    import Tkinter as tk   ## notice capitalized T in Tkinter 
+except ImportError:
+    # for Python3
+    import tkinter as tk  ## notice lowercase 't' in tkinter here
 import tkinter.filedialog as filedialog
 import tkinter.messagebox as messagebox
 import tkinter.ttk as ttk
